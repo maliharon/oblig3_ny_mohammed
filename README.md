@@ -1,2 +1,2 @@
-# oblig3_ny_mohammed
+# Oblig3-webutvikling-mohammed
  

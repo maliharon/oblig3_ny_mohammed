@@ -1,0 +1,148 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2727;
+    margin: 2rem;
+}
+img{
+    max-height: 400%; /* Endret høyden til 400 piksler */
+    max-width: 100%; /* Endret bredden til 300 piksler */
+}
+.navbar{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap:1rem ;
+    margin: auto 0 auto;
+    flex-wrap: wrap;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+
+}
+#grid-container  {
+    display: grid;
+    grid-template-areas:
+    
+                        "header header header ."
+                        "main main main"
+                        "footer footer footer";  
+                        
+
+}
+
+
+/* jeg har lest lit på (MDN) og hentet jeg den fra der.*/
+
+header, main, footer{
+    padding: 1rem;
+}
+header{
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+body main section article img {
+    width: 100%;
+    height: auto;
+}
+
+#logo{
+    text-decoration: none;
+    margin: auto;
+}
+
+.responsive{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #171616;
+    margin: 0;
+    padding: 0;
+    top: 45;
+    width: 40;
+    list-style: none;
+}
+.responsive a{
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #171717;
+    border-radius: 5px;
+    font-weight: 400;
+}
+main{
+    grid-area: main;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 1rem; 
+}
+
+#service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#icons {
+    display: flex;
+   
+    justify-content: center;
+    gap: 1.5rem;
+}   
+/* .default-flex {
+    margin-right: 50px;
+} */
+
+/* CSS for hamburger menu */
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar.active {
+        display: flex;
+    }
+}
